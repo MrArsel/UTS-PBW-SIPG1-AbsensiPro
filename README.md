@@ -52,4 +52,29 @@ Project ini dibuat sebagai tugas **UTS Pemrograman Berbasis Web (PBW)**.
 1. Clone repository ini:
    ```bash
    git clone https://github.com/agungkrisnayuda/UTS-PBW-SIPG1-AbsensiPro.git
-  ```
+   ```
+2. Masuk ke folder project:
+   ```bash
+   cd UTS-PBW-SIPG1-AbsensiPro
+   ```
+3. Install dependency:
+   ```bash
+   composer install
+   ```
+4. Copy file .env:
+   ```bash
+   cp .env.example .env
+   ```
+5. Generate key:
+   ```bash
+   php artisan key:generate
+   ```
+6. Setting database di .env
+7. Migrasi database:
+   ```bash
+   php artisan migrate
+   ```
+8. Jalankan server:
+   ```bash
+   php artisan serve
+   ```
