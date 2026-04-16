@@ -74,7 +74,11 @@ Project ini dibuat sebagai tugas **UTS Pemrograman Berbasis Web (PBW)**.
    ```bash
    php artisan migrate
    ```
-8. Jalankan server:
+8. Jalankan npm dev :
+   ```bash
+   npm run dev
+   ``` 
+9. Jalankan server:
    ```bash
    php artisan serve
    ```
