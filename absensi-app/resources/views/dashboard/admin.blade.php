@@ -11,7 +11,7 @@
 
     <!-- kiri -->
     <div class="header-left">
-        <h1 class="logo">Absensi App</h1>
+        <h1 class="logo">AbsensiPro</h1>
 
         <div class="nav-menu">
             <a href="/dashboard" class="nav-link">Dashboard</a>
