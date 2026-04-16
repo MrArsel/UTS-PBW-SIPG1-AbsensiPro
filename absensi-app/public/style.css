@@ -1,0 +1,457 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+}
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.6s;
+}
+
+.scroll-animate.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: white;
+}
+
+/* logo navbar */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #fff;
+}
+
+/* gambar logo */
+.logo img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+        background: #e0e7ff;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.logo:hover img {
+    transform: rotate(5deg) scale(1.05);
+    transition: 0.3s;
+}
+.menu a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.btn-outline {
+    border: 1px solid white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 50px;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: white;
+}
+
+.hero-text h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    color: #ddd;
+}
+
+.btn-main {
+    background: #4facfe;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: white;
+}
+/* BUTTON BASE */
+.btn-main, .btn-outline {
+    position: relative;
+    overflow: hidden;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+/* WARNA AWAL */
+.btn-main {
+    background: transparent;
+    border: 2px solid #4facfe;
+    color: #4facfe;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+/* SWIPE EFFECT */
+.btn-main::before,
+.btn-outline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #4facfe, #00f2fe);
+    transition: 0.4s ease;
+    z-index: 0;
+}
+
+/* HOVER → SWIPE MASUK */
+.btn-main:hover::before,
+.btn-outline:hover::before {
+    left: 0;
+}
+
+/* TEXT DI ATAS */
+.btn-main span,
+.btn-outline span {
+    position: relative;
+    z-index: 1;
+}
+
+/* WARNA TEXT SAAT HOVER */
+.btn-main:hover span,
+.btn-outline:hover span {
+    color: white;
+}
+.hero-img img {
+    width: 400px;
+}
+.btn-primary {
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+/* FITUR */
+/* CONTAINER */
+.fitur {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+/* CARD */
+.fitur-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.4s;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* ICON */
+.fitur-card .icon {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+/* TITLE */
+.fitur-card h3 {
+    color: #1e3a8a;
+    margin-bottom: 10px;
+}
+
+/* DESC */
+.fitur-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* HOVER EFFECT */
+.fitur-card:hover {
+    transform: translateY(-10px) scale(1.03);
+}
+
+/* GLOW EFFECT */
+.fitur-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(59,130,246,0.3), transparent);
+    transition: 0.5s;
+}
+
+.fitur-card:hover::before {
+    left: 100%;
+}
+
+/* ANIMASI MASUK */
+.fitur-card {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 0.6s ease forwards;
+}
+.icon {
+    background: #e0e7ff;
+    padding: 15px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* HOVER ICON */
+.fitur-card:hover .icon {
+    transform: scale(1.2) rotate(5deg);
+    color: #1e3a8a;
+}
+
+.fitur-card:nth-child(2) { animation-delay: 0.2s; }
+.fitur-card:nth-child(3) { animation-delay: 0.4s; }
+.fitur-card:nth-child(4) { animation-delay: 0.6s; }
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* FLOATING IMAGE */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.img-main {
+    animation: float 4s ease-in-out infinite;
+}
+
+.img-mobile {
+    animation: float 5s ease-in-out infinite;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #1e3c72;
+    color: white;
+}
+
+/* AUTH (LOGIN & REGISTER) */
+/* BACK BUTTON */
+.back-btn {
+    display: inline-block;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #2a5298;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    color: #1e3c72;
+    transform: translateX(-3px);
+}
+/* FLOATING BACK BUTTON */
+.back-floating {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: white;
+    color: #2a5298;
+    padding: 10px 15px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 14px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+/* Hover effect */
+.back-floating:hover {
+    transform: translateY(-3px);
+    background: #2a5298;
+    color: white;
+}
+
+/* Animasi muncul */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.back-floating {
+    animation: fadeInUp 0.8s ease;
+}
+.auth-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+}
+
+.auth-card {
+    background: white;
+    padding: 40px;
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.auth-card h2 {
+    margin-bottom: 20px;
+    color: #1e3c72;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 14px;
+    color: #555;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #2a5298;
+}
+
+.btn-auth {
+    width: 100%;
+    padding: 10px;
+    background: #2a5298;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-auth:hover {
+    background: #1e3c72;
+}
+
+.auth-link {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.auth-link a {
+    color: #2a5298;
+    text-decoration: none;
+}
+
+/* ANIMASI MASUK */
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.auth-card {
+    animation: fadeSlideUp 0.8s ease;
+}
+
+/* ANIMASI INPUT */
+.input-group input {
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    transform: scale(1.02);
+    box-shadow: 0 0 5px rgba(42,82,152,0.5);
+}
+
+/* ANIMASI BUTTON */
+.btn-auth {
+    transition: 0.3s;
+}
+
+.btn-auth:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* HERO ANIMATION */
+@keyframes fadeLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.hero-text {
+    animation: fadeLeft 1s ease;
+}
+
+.hero-img {
+    animation: fadeRight 1s ease;
+}

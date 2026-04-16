@@ -1,0 +1,326 @@
+/* RESET */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+}
+
+/* HEADER FIXED */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #1e3a8a;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* KIRI (LOGO + MENU) */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* 🔥 jarak logo ke menu */
+}
+
+/* LOGO */
+.logo {
+    margin: 0;
+    font-size: 20px;
+}
+
+/* NAV */
+.nav-menu {
+    display: flex;
+    gap: 20px;
+}
+.header > .nav-menu {
+    flex: 1;
+}
+
+/* FIX: biar tidak kepotong */
+.header h1 {
+    margin: 0;
+    font-size: 20px;
+    flex: 1;
+}
+
+/* LINK */
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* HOVER EFFECT (SWIPE KIRI → KANAN) */
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: 0.3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link:hover {
+    opacity: 0.8;
+}
+/* USER MENU FIX */
+.user-menu {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* FIX UTAMA ADA DI SINI */
+.username {
+    font-weight: bold;
+    white-space: nowrap; /* 🔥 biar tidak kepotong */
+    max-width: 200px;
+}
+
+/* CONTENT BIAR GA KETUTUP HEADER */
+.content {
+    padding: 100px 20px 20px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* CARD */
+.card-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1;
+    min-width: 200px;
+    background: linear-gradient(135deg, #3b82f6, #1e3a8a);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 14px;
+}
+
+.card p {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+/* BOX */
+.box {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+/* LIST USER */
+.user-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.user-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+/* ICON USER */
+.username i {
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+/* DROPDOWN ICON */
+.dropdown-item i {
+    margin-right: 8px;
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+/* HOVER EFFECT */
+.dropdown-item:hover i {
+    transform: translateX(3px);
+    transition: 0.2s;
+}
+/* DROPDOWN */
+.dropdown {
+    position: absolute;
+    right: 0;
+    top: 40px;
+    background: white;
+    color: black;
+    min-width: 160px;
+    border-radius: 8px;
+    display: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+
+    opacity: 0;
+    transform: translateY(10px);
+    transition: 0.3s;
+}
+
+.dropdown.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+/* ITEM DROPDOWN */
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    padding: 10px 12px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    transition: 0.2s;
+    border-radius: 6px;
+}
+
+/* HOVER GENERAL */
+.dropdown-item:hover {
+    background: #f3f4f6;
+}
+.dropdown button {
+    border: none;        /* hilangkan border hitam */
+    outline: none;       /* hilangkan garis focus */
+    background: none;
+}
+/* KHUSUS LOGOUT */
+.logout {
+    color: #dc2626;
+    font-weight: bold;
+}
+
+/* HOVER LOGOUT */
+.logout:hover {
+    background: #fee2e2;
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px){
+    .card-container {
+        flex-direction: column;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+
+/* user */
+
+/* TABLE */
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.custom-table th {
+    background: #e5e7eb;
+    padding: 10px;
+    text-align: left;
+}
+
+.custom-table td {
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.custom-table tr:hover {
+    background: #f9fafb;
+}
+
+/* absen */
+
+/* BUTTON */
+.btn-success {
+    background: #16a34a;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: #2563eb;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-danger {
+    background: #dc2626;
+    color: white;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* INPUT */
+.input-date {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+/* STATUS */
+.status {
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+.status.done {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.status.pending {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
