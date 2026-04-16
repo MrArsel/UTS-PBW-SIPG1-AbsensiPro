@@ -20,10 +20,36 @@ Project ini dibuat sebagai tugas **UTS Pemrograman Berbasis Web (PBW)**.
 
 ---
 
-## ✨ Fitur Utama
+## Fitur Utama
 - Manajemen data peserta
 - Sistem absensi (hadir, tidak hadir, dll)
 - Edit & hapus data peserta
 - Validasi input data
 - Notifikasi interaktif (SweetAlert2)
 - Tampilan sederhana & user-friendly
+
+---
+
+## Teknologi yang Digunakan
+- **Laravel** (Framework PHP)
+- **PHP**
+- **MySQL**
+- **HTML, CSS, JavaScript**
+- **SweetAlert2**
+
+---
+
+## Struktur Folder (Singkat)
+1. app/ -> Logic utama aplikasi
+2. config/ -> Konfigurasi project
+3. public/ -> Akses file publik (index.php, assets)
+4. resources/ -> View (Blade), CSS, JS
+5. routes/ -> Routing aplikasi
+
+---
+
+## Cara Instalasi
+1. Clone repository ini:
+   ```bash
+   git clone https://github.com/agungkrisnayuda/UTS-PBW-SIPG1-AbsensiPro.git
+  ```
