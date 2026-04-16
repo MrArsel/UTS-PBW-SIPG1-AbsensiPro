@@ -11,9 +11,8 @@ UTS PBW Sistem Absensi
 ![MySQL](https://img.shields.io/badge/Database-MySQL-orange)
 
 Link Mockup : 
-'''bash
 https://www.figma.com/design/9Gh6HhFLhFNTycvJ5cZp4t/UTS_PBW_Absensi?node-id=0-1&t=7NHPnp9yYruBU4OZ-1
-'''
+
 ---
 
 ## Deskripsi Singkat
